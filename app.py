@@ -156,6 +156,8 @@ def modificador(cedula):
 #print(database["5591945"]["nombre"])
 @app.route("/datos/<string:cedula>/")
 def datos(cedula):
+    print("EL dato es  ")
+    print(persona1[cedula])
     return render_template("datos.html",paciente=persona1[cedula],cedula=cedula)
 
 @app.route("/datos/")
