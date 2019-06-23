@@ -213,10 +213,9 @@ def formulario():
         diccionario["telefono"]= telefono
         diccionario["vacunas"]=[]
         persona1[cedula]=diccionario
-       
-        redireccionar="http://"+ip +"/datos/"
+        
         local="https://saludbc3.herokuapp.com/datos/"
-        print(redireccionar)
+        print(persona1)
         return redirect(local+cedula)
     else:
         redireccionar="http://"+ip +"/registro/"
