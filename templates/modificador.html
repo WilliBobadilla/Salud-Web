@@ -37,23 +37,23 @@
             <ul class="navbar-nav ml-auto">
               
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://127.0.0.1:5000/datos/{{cedula}}">Datos personales</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://saludbc3.herokuapp.com/datos/{{cedula}}">Datos personales</a>
               </li>
               
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://127.0.0.1:5000/historial/{{cedula}}">historial clinico</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://saludbc3.herokuapp.com/historial/{{cedula}}">historial clinico</a>
               </li>
              
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://127.0.0.1:5000/otros/{{cedula}}">Odontologia y Oftalmología</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://saludbc3.herokuapp.com/otros/{{cedula}}">Odontologia y Oftalmología</a>
               </li>
     
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://127.0.0.1:5000/estudio/{{cedula}}">estudios clinicos</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://saludbc3.herokuapp.com/estudio/{{cedula}}">estudios clinicos</a>
               </li>
     
               <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://127.0.0.1:5000/vacuna/{{cedula}}">vacunacion</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://saludbc3.herokuapp.com/vacuna/{{cedula}}">vacunacion</a>
               </li>
     
             </ul>
@@ -62,7 +62,7 @@
       </nav>
     
 <!-- datos personales Grid Section -->
-    section class="datos personales" id="datos_personales">
+    <section class="datos personales" id="datos_personales">
     <div class="container">
         <img class="img-fluid mb-5 d-block mx-auto" style="margin-top:190px" src="{{ url_for('static', filename='img/imagen7.jpg') }}" alt="">
       <h2 class="text-center text-uppercase text-secondary mb-0">Configurar Datos Personales </h2>
