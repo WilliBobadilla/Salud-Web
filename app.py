@@ -147,7 +147,7 @@ def modificador(cedula):
         persona1[cedula]["apellido"] = ape
         nom = request.values.get("nombre4")
         persona1[cedula]["nombre"] = nom
-        return redirect("http://127.0.0.1:5000/datos/"+cedula)
+        return redirect("https://saludbc3.herokuapp.com/datos/"+cedula)
         
     else:
         return render_template("modificador.html",paciente=persona1[cedula],cedula=cedula)
@@ -161,21 +161,21 @@ def datos(cedula):
 @app.route("/datos/")
 def datos1():
         redireccionar="http://"+ip +"/registro"
-        local="http://127.0.0.1:5000/registro"    
+        local="https://saludbc3.herokuapp.com/registro"    
         print(redireccionar)
         return redirect(local)
 
 @app.route("/",methods=['GET','POST'])
 def for_home():
-    local="http://127.0.0.1:5000/datos/"
+    local="https://saludbc3.herokuapp.com/datos/"
     if request.method=='POST':
         cedula=request.form.get('cedula')
         #debemos de comparar si ya hay la cedula, si no hay aun redireccionar al /registro
         if cedula in persona1:  #verifica si za esta gaurdado en el diccionario
             print("si esta la cedula")
-            return redirect("http://127.0.0.1:5000/datos/"+cedula)
+            return redirect("https://saludbc3.herokuapp.com/datos/"+cedula)
         else:
-            return redirect("http://127.0.0.1:5000/registro")
+            return redirect("https://saludbc3.herokuapp.com/registro")
     return render_template("index.html",cedula="5591945")
 
 @app.route("/vacuna/<string:cedula>/")
@@ -215,12 +215,12 @@ def formulario():
         persona1[cedula]=diccionario
        
         redireccionar="http://"+ip +"/datos/"
-        local="http://127.0.0.1:5000/datos/"
+        local="https://saludbc3.herokuapp.com/datos/"
         print(redireccionar)
         return redirect(local+cedula)
     else:
         redireccionar="http://"+ip +"/registro/"
-        local="http://127.0.0.1:5000/registro/"    
+        local="https://saludbc3.herokuapp.com/registro/"    
         print(redireccionar)
         return redirect(local+cedula)
     return render_template("registro.html")
