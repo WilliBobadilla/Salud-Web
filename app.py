@@ -231,14 +231,7 @@ def formulario():
 def registro_html():
     return render_template("registro.html")
 
-"""
-@app.route("/",methods=['GET','POST'])
-def for_registro():
-    if request.method=='POST':
-        Regiatro=request.form.get('cedula')
-        return redirect("http://127.0.0.1:5000/datos/"+cedula)
-    return render_template("index.html",cedula="5591945")
-    """
+
 if __name__=='__main__':
     ip='192.168.1.130'
     app.run(host=ip)
